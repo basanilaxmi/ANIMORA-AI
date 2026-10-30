@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090910">
+  <title>ANIMORA AI — Creative Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="home"><span class="brand-mark">A</span><span>ANIMORA <b>AI</b></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav">
+        <button class="nav-item active" data-page="home"><span>⌂</span> Overview</button>
+        <button class="nav-item" data-page="chat"><span>✧</span> AI Chat</button>
+        <button class="nav-item" data-page="image"><span>▧</span> AI Image</button>
+        <button class="nav-item" data-page="video"><span>▶</span> AI Video</button>
+        <button class="nav-item" data-page="animate"><span>◈</span> Image to Video</button>
+        <button class="nav-item" data-page="voice"><span>♫</span> AI Voice</button>
+        <button class="nav-item" data-page="editor"><span>✂</span> Video Editor</button>
+      </nav>
+      <div class="side-label second-label">LIBRARY</div>
+      <nav class="nav">
+        <button class="nav-item" data-page="projects"><span>▤</span> My Projects</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="plan-card"><div class="plan-icon">✦</div><b>Creative Studio</b><p>Your ideas, all in one place.</p><span class="plan-tag">STARTER WORKSPACE</span></div>
+        <div class="profile"><div class="avatar">A</div><div><b>Creator</b><small>Local workspace</small></div><span class="online-dot"></span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <b id="pageName">Overview</b></div>
+        <div class="top-actions"><span class="status-dot"></span><span class="status-text">Studio ready</span><button class="icon-button" id="themeButton" title="Toggle accent">◐</button></div>
+      </header>
+
+      <section class="page active-page" id="page-home">
+        <div class="welcome-row">
+          <div><div class="eyebrow">YOUR CREATIVE SPACE</div><h1>Make something <span>amazing.</span></h1><p class="muted">One studio for your ideas, images, videos and sound.</p></div>
+          <div class="welcome-orb"><div class="orb-core">✦</div></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-content"><span class="pill">✦ ALL-IN-ONE AI STUDIO</span><h2>Your imagination.<br><span>No limits.</span></h2><p>Start with a prompt, explore your tools, and build your next creation.</p><button class="primary-button" data-go="image">Create with AI <span>→</span></button></div>
+          <div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-cube">A<span>✧</span></div><div class="spark s1">✦</div><div class="spark s2">✧</div><div class="spark s3">·</div></div>
+        </div>
+        <div class="section-heading"><div><h3>Creative tools</h3><p>Choose where your next idea begins.</p></div><span class="subtle-count">7 TOOLS</span></div>
+        <div class="tool-grid">
+          <button class="tool-card" data-go="chat"><span class="tool-icon purple">✧</span><b>AI Chat</b><small>Brainstorm, write and ask</small><span class="card-arrow">↗</span></button>
+          <button class="tool-card" data-go="image"><span class="tool-icon pink">▧</span><b>AI Image</b><small>Turn prompts into artwork</small><span class="card-arrow">↗</span></button>
+          <button class="tool-card" data-go="video"><span class="tool-icon blue">▶</span><b>AI Video</b><small>Create video from text</small><span class="card-arrow">↗</span></button>
+          <button class="tool-card" data-go="animate"><span class="tool-icon orange">◈</span><b>Image to Video</b><small>Animate a still image</small><span class="card-arrow">↗</span></button>
+          <button class="tool-card" data-go="voice"><span class="tool-icon green">♫</span><b>AI Voice</b><small>Prepare voiceover scripts</small><span class="card-arrow">↗</span></button>
+          <button class="tool-card" data-go="editor"><span class="tool-icon violet">✂</span><b>Video Editor</b><small>Preview and manage media</small><span class="card-arrow">↗</span></button>
+        </div>
+        <div class="notice"><span>ⓘ</span><div><b>About AI generation</b><p>This starter app has a working interface and local media preview. Real AI chat, image, video and voice generation need API services and a secure backend. No fake generation is shown.</p></div></div>
+      </section>
+
+      <section class="page" id="page-chat">
+        <div class="page-intro"><div class="eyebrow">YOUR AI ASSISTANT</div><h1>AI <span>Chat</span></h1><p class="muted">A chat workspace ready to connect to your AI model.</p></div>
+        <div class="chat-layout panel">
+          <div class="chat-head"><div class="avatar glow">✧</div><div><b>Animora Assistant</b><small><span class="status-dot"></span> Frontend demo mode</small></div><span class="demo-label">NOT CONNECTED</span></div>
+          <div class="chat-messages" id="chatMessages"><div class="message assistant"><span class="message-avatar">✧</span><div><b>Animora Assistant</b><p>Hey creator! I’m your studio assistant interface. Connect an AI API to enable live AI replies. What are you planning to create?</p></div></div></div>
+          <form class="chat-compose" id="chatForm"><input id="chatInput" placeholder="Message Animora..." autocomplete="off"><button class="send-button" aria-label="Send message">➤</button></form>
+          <p class="tiny-note">Demo replies are local placeholders, not generated by an AI model.</p>
+        </div>
+      </section>
+
+      <section class="page" id="page-image">
+        <div class="page-intro"><div class="eyebrow">VISUAL CREATION</div><h1>AI <span>Image</span></h1><p class="muted">Describe your idea and prepare an image-generation request.</p></div>
+        <div class="generator-layout">
+          <div class="panel form-panel"><label for="imagePrompt">IMAGE PROMPT</label><textarea id="imagePrompt" rows="5" placeholder="A tiny magical fox in a glowing forest, cinematic lighting..."></textarea><div class="field-row"><div><label for="imageStyle">STYLE</label><select id="imageStyle"><option>Cinematic</option><option>Anime</option><option>3D Cartoon</option><option>Photorealistic</option><option>Watercolor</option></select></div><div><label for="imageRatio">ASPECT RATIO</label><select id="imageRatio"><option>1:1 Square</option><option>9:16 Portrait</option><option>16:9 Landscape</option></select></div></div><button class="primary-button full" id="imageGenerate">Prepare image request →</button><p class="tiny-note">Generation requires an image API connection.</p></div>
+          <div class="panel preview-panel"><div class="preview-title"><b>Preview area</b><span class="demo-label">EMPTY</span></div><div class="empty-preview"><div class="preview-symbol">▧</div><b>Your artwork will appear here</b><p>Connect an image model to generate from your prompt.</p></div><div id="imageRequest" class="request-output hidden"></div></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-video">
+        <div class="page-intro"><div class="eyebrow">MOTION CREATION</div><h1>AI <span>Video</span></h1><p class="muted">Prepare a text-to-video prompt for your chosen AI video service.</p></div>
+        <div class="generator-layout">
+          <div class="panel form-panel"><label for="videoPrompt">VIDEO DESCRIPTION</label><textarea id="videoPrompt" rows="5" placeholder="A cinematic drone shot flying over a futuristic city at sunset..."></textarea><div class="field-row"><div><label for="videoDuration">DURATION</label><select id="videoDuration"><option>5 seconds</option><option>10 seconds</option><option>15 seconds</option></select></div><div><label for="videoRatio">FORMAT</label><select id="videoRatio"><option>9:16 Vertical</option><option>16:9 Landscape</option><option>1:1 Square</option></select></div></div><button class="primary-button full" id="videoGenerate">Prepare video request →</button><p class="tiny-note">Text-to-video needs a compatible video-generation API.</p></div>
+          <div class="panel preview-panel"><div class="preview-title"><b>Video preview</b><span class="demo-label">EMPTY</span></div><div class="empty-preview"><div class="preview-symbol">▶</div><b>Your video will appear here</b><p>After connecting a video model, generated clips can be previewed here.</p></div><div id="videoRequest" class="request-output hidden"></div></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-animate">
+        <div class="page-intro"><div class="eyebrow">IMAGE ANIMATION</div><h1>Image to <span>Video</span></h1><p class="muted">Upload an image and prepare instructions to animate it.</p></div>
+        <div class="panel upload-panel"><label class="upload-zone" for="animateUpload"><span class="upload-icon">⇧</span><b>Choose an image</b><small>JPG, PNG or WEBP • Select a file from your phone</small><input type="file" id="animateUpload" accept="image/png,image/jpeg,image/webp"></label><div id="animatePreview" class="media-preview hidden"></div><label for="motionPrompt">MOTION PROMPT</label><textarea id="motionPrompt" rows="3" placeholder="Make the character gently turn, hair moving in the wind, camera slowly zooming in..."></textarea><button class="primary-button" id="animatePrepare">Prepare animation request →</button><div id="animateRequest" class="request-output hidden"></div><p class="tiny-note">The selected image is previewed locally. Animation needs a connected image-to-video API.</p></div>
+      </section>
+
+      <section class="page" id="page-voice">
+        <div class="page-intro"><div class="eyebrow">AUDIO WORKSPACE</div><h1>AI <span>Voice</span></h1><p class="muted">Write a voiceover and listen using your device's built-in speech feature.</p></div>
+        <div class="panel form-panel voice-panel"><label for="voiceText">VOICEOVER TEXT</label><textarea id="voiceText" rows="6" placeholder="Welcome to Animora AI, your creative world..."></textarea><div class="field-row"><div><label for="voiceLanguage">LANGUAGE / VOICE</label><select id="voiceLanguage"><option value="en-US">English</option><option value="te-IN">Telugu (if available on device)</option><option value="hi-IN">Hindi (if available on device)</option></select></div><div><label for="voiceRate">SPEECH SPEED</label><select id="voiceRate"><option value="0.9">Slow</option><option value="1" selected>Normal</option><option value="1.15">Fast</option></select></div></div><div class="button-row"><button class="primary-button" id="speakButton">▶ Play voice</button><button class="secondary-button" id="stopSpeak">Stop</button></div><p class="tiny-note">Uses browser/device speech synthesis. This is not an AI voice-cloning service.</p></div>
+      </section>
+
+      <section class="page" id="page-editor">
+        <div class="page-intro"><div class="eyebrow">CREATIVE EDITING</div><h1>Video <span>Editor</span></h1><p class="muted">Import a clip for local preview and basic playback controls.</p></div>
+        <div class="panel editor-panel"><label class="upload-zone compact" for="videoUpload"><span class="upload-icon">＋</span><b>Import video from your phone</b><small>MP4 or WEBM supported by your browser</small><input type="file" id="videoUpload" accept="video/mp4,video/webm,video/*"></label><video id="editorVideo" class="editor-video hidden" controls playsinline></video><div class="editor-controls"><div><label for="volumeControl">VOLUME</label><input type="range" id="volumeControl" min="0" max="1" step="0.05" value="1"></div><div><label for="playbackRate">PLAYBACK SPEED</label><select id="playbackRate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></div></div><p class="tiny-note">This starter editor supports importing, previewing, volume and playback speed. It does not yet export edited video or apply transitions.</p></div>
+      </section>
+
+      <section class="page" id="page-projects">
+        <div class="page-intro"><div class="eyebrow">YOUR LIBRARY</div><h1>My <span>Projects</span></h1><p class="muted">Requests you prepare in this session appear here.</p></div>
+        <div class="panel projects-panel" id="projectsList"><div class="empty-projects"><span>▤</span><b>No projects yet</b><p>Your prepared generation requests will be listed here.</p></div></div>
+      </section>
+      <footer class="footer">ANIMORA AI <span>•</span> Your creative universe <span class="footer-right">Starter frontend v1.0</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
